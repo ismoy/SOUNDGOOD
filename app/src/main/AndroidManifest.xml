@@ -4,6 +4,7 @@
     package="cl.ismoy_belizaire.soundgood">
 
     <application
+        android:name=".SoundGoodApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
