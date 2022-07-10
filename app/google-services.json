@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "373060758535",
+    "project_id": "soundgood-d6155",
+    "storage_bucket": "soundgood-d6155.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:373060758535:android:a85330e3f70422ffc84ea2",
+        "android_client_info": {
+          "package_name": "cl.ismoy_belizaire.soundgood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "373060758535-m05nauvi6cb4n301c8ifhdl50dvgkq77.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAP8X6knZnsv83pBtPj7xvmA2HDpmid3I4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "373060758535-m05nauvi6cb4n301c8ifhdl50dvgkq77.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
