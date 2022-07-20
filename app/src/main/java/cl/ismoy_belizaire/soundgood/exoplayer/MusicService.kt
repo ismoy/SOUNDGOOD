@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.support.v4.media.MediaBrowserCompat
 import android.support.v4.media.session.MediaSessionCompat
 import androidx.media.MediaBrowserServiceCompat
+import cl.ismoy_belizaire.soundgood.exoplayer.callbacks.MusicPlayerNotificationListener
 import com.google.android.exoplayer2.SimpleExoPlayer
 import com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
@@ -28,6 +29,8 @@ class MusicService:MediaBrowserServiceCompat() {
     private val  serviceScope =CoroutineScope(Dispatchers.Main +servicejob)
     private lateinit var medisSession:MediaSessionCompat
     private lateinit var mediaSessionConnector: MediaSessionConnector
+    private lateinit var musicNotificationManager: MusicNotificationManager
+    var isForegroundService = false
     override fun onCreate() {
         super.onCreate()
         val activityIntent =packageManager?.getLaunchIntentForPackage(packageName)?.let {
@@ -38,6 +41,10 @@ class MusicService:MediaBrowserServiceCompat() {
             isActive =true
         }
         sessionToken =medisSession.sessionToken
+        musicNotificationManager =
+            MusicNotificationManager(this,medisSession.sessionToken,MusicPlayerNotificationListener(this)){
+
+            }
         mediaSessionConnector = MediaSessionConnector(medisSession)
         mediaSessionConnector.setPlayer(exoPlayer)
     }
