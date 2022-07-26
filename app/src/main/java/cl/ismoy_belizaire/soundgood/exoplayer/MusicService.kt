@@ -66,7 +66,7 @@ class MusicService:MediaBrowserServiceCompat() {
             MusicNotificationManager(this,medisSession.sessionToken,MusicPlayerNotificationListener(this)){
             curSongDuration = exoPlayer.duration
             }
-        val musicplaybackpreparer =MusicPlaybackPreparer(firebaseMusicSource){
+        val musicplaybackpreparer = MusicPlaybackPreparer(firebaseMusicSource){
             curPlayingSong = it
             preparePlayer(firebaseMusicSource.songs,it,true)
         }
