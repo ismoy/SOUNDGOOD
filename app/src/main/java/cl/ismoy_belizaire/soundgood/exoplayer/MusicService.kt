@@ -13,6 +13,7 @@ import cl.ismoy_belizaire.soundgood.exoplayer.callbacks.MusicPlaybackPreparer
 import cl.ismoy_belizaire.soundgood.exoplayer.callbacks.MusicPlayerEventListener
 import cl.ismoy_belizaire.soundgood.exoplayer.callbacks.MusicPlayerNotificationListener
 import cl.ismoy_belizaire.soundgood.other.Constants.MEDIA_ROOT_ID
+import cl.ismoy_belizaire.soundgood.other.Constants.NETWORK_ERROR
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.Player
 import com.google.android.exoplayer2.SimpleExoPlayer
@@ -131,6 +132,7 @@ class MusicService:MediaBrowserServiceCompat() {
                         }
 
                     }else{
+                        medisSession.sendSessionEvent(NETWORK_ERROR,null)
                         result.sendResult(null)
                     }
                  }
