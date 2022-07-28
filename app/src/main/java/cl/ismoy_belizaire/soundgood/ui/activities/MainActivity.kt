@@ -1,7 +1,8 @@
-package cl.ismoy_belizaire.soundgood
+package cl.ismoy_belizaire.soundgood.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import cl.ismoy_belizaire.soundgood.R
 import com.bumptech.glide.RequestManager
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
